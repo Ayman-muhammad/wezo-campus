@@ -1,80 +1,144 @@
-# WEZO CAMPUS HUB
+# 🎓 WEZO CAMPUS HUB
 
-> **The Ultimate Student Ecosystem**
->
-> A modular, student-first digital campus platform designed to bring academic resources, student commerce, accommodation discovery, and campus services into one unified ecosystem.
+### The Digital Operating System for University Communities
 
-**Powered by AYGLOBE INC**  
+> **One account. One campus ecosystem. One digital hub.**
+
+WEZO CAMPUS HUB is a modular, student-first digital campus platform built to centralize the services university students use every day.
+
+The platform brings together academic resources, student commerce, accommodation discovery, campus communication, student profiles, administrative operations, and future financial services into one extensible ecosystem.
+
+**Built by AYGLOBE INC**  
 **Founder & CEO:** Ayman Muhammad
 
 ---
 
-## 📌 Project Overview
+## 🚀 Project Status
 
-**WEZO CAMPUS HUB** is a full-stack web platform designed to serve university students through a centralized digital ecosystem.
+**Development Stage:** Active Development  
+**Architecture:** Modular PHP Application  
+**Primary Language:** PHP  
+**Database:** MySQL  
+**Repository:** `Ayman-muhammad/wezo-campus`
 
-The platform combines academic collaboration, student-to-student commerce, accommodation discovery, and user services into a single application.
+> ⚠️ WEZO CAMPUS HUB is under active development. Some modules described in the product roadmap are planned capabilities and may not yet be production-ready.
 
-Instead of requiring students to use multiple disconnected platforms for notes, marketplace listings, hostels, resources, and campus information, WEZO CAMPUS HUB provides these services through one integrated system.
+---
 
-### Core Platform Modules
+# 📖 Table of Contents
 
-- 🎓 Student Dashboard
-- 📚 Study Notes
-- 📖 Academic Resources
-- 🛒 Student Marketplace
-- 🏠 Hostel Discovery
-- 👤 Student Profiles
-- 🔐 Authentication & Authorization
-- 📊 Campus Statistics
-- 📢 Campus Announcements
-- 🛡️ Administrative Management
-- 💰 Future Payments & Monetization Infrastructure
+- [Overview](#-overview)
+- [Vision](#-vision)
+- [Problem](#-the-problem)
+- [Solution](#-the-solution)
+- [Core Modules](#-core-platform-modules)
+- [Architecture](#️-system-architecture)
+- [Repository Structure](#-repository-structure)
+- [Technology Stack](#-technology-stack)
+- [Application Design](#-application-design)
+- [Security](#-security)
+- [Installation](#-installation)
+- [Configuration](#️-configuration)
+- [Development Workflow](#-development-workflow)
+- [Database](#-database)
+- [Testing](#-testing)
+- [Deployment](#-deployment)
+- [Roadmap](#-roadmap)
+- [Engineering Principles](#-engineering-principles)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [About AYGLOBE INC](#-about-ayglobe-inc)
+
+---
+
+# 🌍 Overview
+
+WEZO CAMPUS HUB is designed as a centralized digital infrastructure for university communities.
+
+Traditional university environments often force students to move between multiple disconnected systems:
+
+- Academic portals
+- WhatsApp groups
+- Marketplace platforms
+- Hostel listings
+- Notice boards
+- Student organizations
+- Payment systems
+- Communication tools
+
+WEZO CAMPUS HUB aims to reduce this fragmentation by providing a unified digital environment.
+
+The platform is designed around a simple principle:
+
+> **Students should not need ten different platforms to manage campus life.**
 
 ---
 
 # 🎯 Vision
 
-WEZO CAMPUS HUB aims to become a scalable digital infrastructure layer for university communities.
+Our long-term vision is to build a scalable digital infrastructure layer for universities across Africa and emerging markets.
 
-The long-term vision is to provide students with:
+WEZO CAMPUS HUB aims to become:
 
-> **One account. One campus ecosystem. One digital hub.**
+> **The digital operating system for campus life.**
 
-The platform is designed around the principle that university students should be able to discover, share, buy, sell, learn, communicate, and access essential campus services from a single trusted environment.
-
----
-
-# 🧭 Product Philosophy
-
-WEZO CAMPUS HUB follows a **student-first architecture**.
-
-The platform prioritizes:
-
-- Simplicity
-- Accessibility
-- Security
-- Modularity
-- Scalability
-- Performance
-- Maintainability
-- Community participation
-
-The system is designed so that individual modules can evolve independently without requiring the entire application to be rewritten.
+The platform is designed to support students throughout their university journey—from discovering academic resources to finding accommodation, buying and selling items, communicating with their campus community, and eventually accessing integrated financial services.
 
 ---
 
-# 🏗️ System Architecture
+# ❗ The Problem
 
-WEZO CAMPUS HUB follows a modular PHP architecture with separation between:
+University students operate inside highly fragmented digital environments.
+
+A typical student may need separate platforms for:
+
+| Need | Traditional Approach |
+|---|---|
+| Study materials | WhatsApp / Google Drive / PDFs |
+| Marketplace | Social media groups |
+| Accommodation | Agents / social media |
+| Announcements | Notice boards / groups |
+| Student identity | University portal |
+| Campus discovery | Word of mouth |
+| Communication | Multiple messaging platforms |
+| Payments | Separate financial applications |
+
+This fragmentation creates:
+
+- Information overload
+- Poor discoverability
+- Duplicated effort
+- Limited trust
+- Poor organization
+- Difficult access to campus services
+
+WEZO CAMPUS HUB addresses this fragmentation through a unified architecture.
+
+---
+
+# 💡 The Solution
+
+WEZO CAMPUS HUB provides a centralized student ecosystem where users can access campus-related services through one account.
+
+### Core concept
 
 ```text
-Presentation Layer
-        ↓
-Application / Core Layer
-        ↓
-Service & Business Logic
-        ↓
-Database Abstraction
-        ↓
-MySQL Database
+                         WEZO CAMPUS HUB
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                 │
+           ACADEMIC          CAMPUS            COMMERCE
+              │                 │                 │
+        ┌─────┴─────┐     ┌─────┴─────┐     ┌─────┴─────┐
+        │           │     │           │     │           │
+      Notes      Resources Profiles Announcements Marketplace
+                                           
+              ┌─────────────────────────────────────┐
+              │
+              │        SERVICES & INFRASTRUCTURE
+              │
+              ├── Authentication
+              ├── Administration
+              ├── Statistics
+              ├── Accommodation
+              └── Future Payments
