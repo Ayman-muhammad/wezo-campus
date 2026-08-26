@@ -1,0 +1,636 @@
+[2025-12-01 12:33:43] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'wch_admin'@'localhost' (using password: YES)
+--------------------------------------------------
+[2025-12-01 12:39:30] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'wch_admin'@'localhost' (using password: YES)
+--------------------------------------------------
+[2025-12-01 12:46:55] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'wch_admin'@'localhost' (using password: YES)
+--------------------------------------------------
+[2025-12-01 12:54:57] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'wch_admin'@'localhost' (using password: YES)
+Context:
+Array
+(
+    [config] => Array
+        (
+            [host] => localhost
+            [port] => 3306
+            [database] => wezo_campus_hub
+            [username] => wch_admin
+        )
+
+    [error_info] => Array
+        (
+            [0] => HY000
+            [1] => 1045
+            [2] => Access denied for user 'wch_admin'@'localhost' (using password: YES)
+        )
+
+)
+
+Backtrace:
+#1 C:\xampp2\htdocs\wezo-campus\core\Database.php(83): Core\Database->logError()
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(21): Core\Database->connect()
+#3 C:\xampp2\htdocs\wezo-campus\core\Database.php(53): Core\Database->__construct()
+#4 C:\xampp2\htdocs\wezo-campus\public\index.php(17): Core\Database->getInstance()
+
+--------------------------------------------------------------------------------
+[2025-12-01 12:57:38] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+Array
+(
+    [sql] => SELECT * FROM dashboard_stats
+    [params] => Array
+        (
+        )
+
+    [error_info] => Array
+        (
+            [0] => 42S02
+            [1] => 1146
+            [2] => Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+        )
+
+)
+
+Backtrace:
+#1 C:\xampp2\htdocs\wezo-campus\core\Database.php(129): Core\Database->logError()
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 12:59:13] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+  sql: SELECT * FROM dashboard_stats
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.dashboard_stats' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 12:59:17] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+  sql: SELECT * FROM dashboard_stats
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.dashboard_stats' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 13:02:04] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+  sql: SELECT * FROM dashboard_stats
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.dashboard_stats' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 13:02:06] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+  sql: SELECT * FROM dashboard_stats
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.dashboard_stats' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 13:04:41] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+  sql: SELECT * FROM dashboard_stats
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.dashboard_stats' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 13:16:22] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.dashboard_stats' doesn't exist
+Context:
+  sql: SELECT * FROM dashboard_stats
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.dashboard_stats' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(147): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\index.php(25): Core\Database->fetch()
+
+--------------------------------------------------------------------------------
+[2025-12-01 20:27:00] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.resource_downloads' doesn't exist
+Context:
+  sql: SELECT r.*, 
+          u.username, u.first_name, u.last_name,
+          c.name as course_name,
+          cat.name as category_name,
+          (SELECT COUNT(*) FROM resource_downloads WHERE resource_id = r.id) as download_count,
+          (SELECT COUNT(*) FROM resource_ratings WHERE resource_id = r.id) as rating_count,
+          (SELECT AVG(rating) FROM resource_ratings WHERE resource_id = r.id) as avg_rating
+          FROM resources r
+          LEFT JOIN users u ON r.user_id = u.id
+          LEFT JOIN courses c ON r.course_id = c.id
+          LEFT JOIN resource_categories cat ON r.category_id = cat.id
+          WHERE r.status = 'published' AND r.is_approved = 1
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.resource_downloads' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(163): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\resources\index.php(88): Core\Database->fetchColumn()
+
+--------------------------------------------------------------------------------
+[2025-12-01 20:27:32] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.resource_downloads' doesn't exist
+Context:
+  sql: SELECT r.*, 
+          u.username, u.first_name, u.last_name,
+          c.name as course_name,
+          cat.name as category_name,
+          (SELECT COUNT(*) FROM resource_downloads WHERE resource_id = r.id) as download_count,
+          (SELECT COUNT(*) FROM resource_ratings WHERE resource_id = r.id) as rating_count,
+          (SELECT AVG(rating) FROM resource_ratings WHERE resource_id = r.id) as avg_rating
+          FROM resources r
+          LEFT JOIN users u ON r.user_id = u.id
+          LEFT JOIN courses c ON r.course_id = c.id
+          LEFT JOIN resource_categories cat ON r.category_id = cat.id
+          WHERE r.status = 'published' AND r.is_approved = 1
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.resource_downloads' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(163): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\resources\index.php(88): Core\Database->fetchColumn()
+
+--------------------------------------------------------------------------------
+[2025-12-01 20:27:50] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.resource_downloads' doesn't exist
+Context:
+  sql: SELECT r.*, 
+          u.username, u.first_name, u.last_name,
+          c.name as course_name,
+          cat.name as category_name,
+          (SELECT COUNT(*) FROM resource_downloads WHERE resource_id = r.id) as download_count,
+          (SELECT COUNT(*) FROM resource_ratings WHERE resource_id = r.id) as rating_count,
+          (SELECT AVG(rating) FROM resource_ratings WHERE resource_id = r.id) as avg_rating
+          FROM resources r
+          LEFT JOIN users u ON r.user_id = u.id
+          LEFT JOIN courses c ON r.course_id = c.id
+          LEFT JOIN resource_categories cat ON r.category_id = cat.id
+          WHERE r.status = 'published' AND r.is_approved = 1
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.resource_downloads' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(163): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\resources\index.php(88): Core\Database->fetchColumn()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:04] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:04","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(13): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:05] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:05","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\login.php(61): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:12] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:12","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(13): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:13] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:13","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\index.php(18): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:13] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:13","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\index.php(250): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:30] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:30","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(13): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:30] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:30","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\login.php(61): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:38] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:38","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(13): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:38] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:38","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\index.php(18): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:58:38] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:58:38","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\index.php(250): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:59:02] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:59:02","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\notes\index.php(16): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 21:59:02] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 21:59:02","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\notes\index.php(77): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:00:33] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:00:33","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:00:33] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:00:33","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\login.php(64): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:00:37] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:00:37","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:04:35] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:04:35","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:04:35] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:04:35","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\login.php(64): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:04:38] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:04:38","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:05:41] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:05:41","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:05:41] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:05:41","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\login.php(64): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:05:43] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:05:43","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:09:25] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:09:25","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\index.php(18): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:09:25] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:09:25","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\index.php(250): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:09:36] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:09:36","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\resources\index.php(15): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:09:36] Query Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wezo_campus_hub.resource_downloads' doesn't exist
+Context:
+  sql: SELECT r.*, 
+          u.username, u.first_name, u.last_name,
+          c.name as course_name,
+          cat.name as category_name,
+          (SELECT COUNT(*) FROM resource_downloads WHERE resource_id = r.id) as download_count,
+          (SELECT COUNT(*) FROM resource_ratings WHERE resource_id = r.id) as rating_count,
+          (SELECT AVG(rating) FROM resource_ratings WHERE resource_id = r.id) as avg_rating
+          FROM resources r
+          LEFT JOIN users u ON r.user_id = u.id
+          LEFT JOIN courses c ON r.course_id = c.id
+          LEFT JOIN resource_categories cat ON r.category_id = cat.id
+          WHERE r.status = 'published' AND r.is_approved = 1
+  params: []
+  error_info: ["42S02",1146,"Table 'wezo_campus_hub.resource_downloads' doesn't exist"]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(163): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\public\resources\index.php(88): Core\Database->fetchColumn()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:09:40] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:09:40","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\notes\index.php(16): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:09:40] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:09:40","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\notes\index.php(77): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:01] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:01","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\index.php(18): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:01] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:01","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\index.php(250): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:07] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:07","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\register.php(12): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:07] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:07","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\register.php(107): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:11] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:11","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:11] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:11","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\login.php(64): include()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:15] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:15","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\login.php(17): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:16] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:16","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\public\index.php(18): Core\Auth->init()
+
+--------------------------------------------------------------------------------
+[2025-12-01 22:10:16] Query Error: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters
+Context:
+  sql: UPDATE `users` SET `last_login` = :last_login WHERE id = ?
+  params: {"last_login":"2025-12-01 22:10:16","0":7}
+  error_info: ["HY093",0]
+Backtrace:
+#2 C:\xampp2\htdocs\wezo-campus\core\Database.php(229): Core\Database->query()
+#3 C:\xampp2\htdocs\wezo-campus\core\Auth.php(56): Core\Database->update()
+#4 C:\xampp2\htdocs\wezo-campus\core\Auth.php(32): Core\Auth->checkLogin()
+#5 C:\xampp2\htdocs\wezo-campus\templates\header.php(14): Core\Auth->init()
+#6 C:\xampp2\htdocs\wezo-campus\public\index.php(250): include()
+
+--------------------------------------------------------------------------------
