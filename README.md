@@ -1,466 +1,574 @@
-You can replace the entire contents of README.md with this.
-
 # 🎓 WEZO CAMPUS HUB
 
 ### The Digital Operating System for University Life
 
 > **One account. One campus ecosystem. One digital hub.**
 
-WEZO CAMPUS HUB is a modular, student-first digital campus platform designed to bring essential university services into one connected ecosystem.
+WEZO CAMPUS HUB is a student-first digital campus platform being engineered to unify academic resources, campus services, student commerce, accommodation discovery, communication, administration, and future financial and AI capabilities into one connected ecosystem.
 
-The platform is being engineered to unify academic resources, student profiles, campus information, accommodation discovery, student commerce, announcements, administration, and future financial infrastructure under a common platform architecture.
-
-**Built by AYGLOBE INC**  
+**Built by AYGLOBE INC**
 **Founder & CEO:** Ayman Muhammad
 
 ---
 
 ## 🚀 Project Status
 
-| Area | Status |
-|---|---|
-| Repository | 🟢 Active |
-| Core Architecture | 🟢 In Development |
-| PHP Application | 🟢 Active |
-| Database Layer | 🟢 Active |
-| API Layer | 🟢 Active |
-| Administration | 🟢 Active |
-| Public Interface | 🟢 Active |
-| Installation System | 🟢 Available |
-| Production Hardening | 🟡 In Progress |
-| Advanced Marketplace | 🟡 Roadmap |
-| Financial Infrastructure | 🔵 Planned |
-| AI Services | 🔵 Planned |
-| Multi-University Infrastructure | 🔵 Planned |
+> This README intentionally distinguishes the current repository foundation from planned product capabilities. Roadmap items are not presented as implemented features unless they exist in the codebase.
 
-> **Important:** This README distinguishes between the current engineering foundation and future product capabilities. A feature appearing in the roadmap does not necessarily mean that feature is already implemented.
+| Area                            | Status         |
+| ------------------------------- | -------------- |
+| Repository Architecture         | 🟢 Active      |
+| Core Application                | 🟢 Active      |
+| PHP Backend                     | 🟢 Active      |
+| Database Layer                  | 🟢 Active      |
+| API Layer                       | 🟢 Active      |
+| Administration                  | 🟢 Active      |
+| Public Application              | 🟢 Active      |
+| Installation System             | 🟢 Available   |
+| Security Hardening              | 🟡 In Progress |
+| Automated Testing               | 🟡 In Progress |
+| Marketplace Expansion           | 🔵 Planned     |
+| Accommodation Platform          | 🔵 Planned     |
+| Financial Infrastructure        | 🔵 Planned     |
+| AI Services                     | 🔵 Planned     |
+| Multi-University Infrastructure | 🔵 Planned     |
 
 ---
 
 # 📖 Table of Contents
 
-- [Vision](#-vision)
-- [Product Overview](#-product-overview)
-- [The Problem](#-the-problem)
-- [The Solution](#-the-solution)
-- [Product Modules](#-product-modules)
-- [User Experience](#-user-experience)
-- [System Architecture](#-system-architecture)
-- [Repository Structure](#-repository-structure)
-- [Technology Stack](#-technology-stack)
-- [Architecture Principles](#-architecture-principles)
-- [Authentication & Authorization](#-authentication--authorization)
-- [API Architecture](#-api-architecture)
-- [Database Architecture](#-database-architecture)
-- [Security](#-security)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Local Development](#-local-development)
-- [Git Workflow](#-git-workflow)
-- [Testing Strategy](#-testing-strategy)
-- [Logging & Observability](#-logging--observability)
-- [Deployment](#-deployment)
-- [Scalability](#-scalability)
-- [Product Roadmap](#-product-roadmap)
-- [Business Model](#-business-model)
-- [Engineering Standards](#-engineering-standards)
-- [Contributing](#-contributing)
-- [Security Reporting](#-security-reporting)
-- [License](#-license)
-- [About AYGLOBE INC](#-about-ayglobe-inc)
+* [Vision](#-vision)
+* [Product Overview](#-product-overview)
+* [The Problem](#-the-problem)
+* [The Solution](#-the-solution)
+* [Product Ecosystem](#-product-ecosystem)
+* [Architecture](#-architecture)
+* [Repository Structure](#-repository-structure)
+* [Technology Stack](#-technology-stack)
+* [Engineering Principles](#-engineering-principles)
+* [Authentication & Authorization](#-authentication--authorization)
+* [API Architecture](#-api-architecture)
+* [Database Architecture](#-database-architecture)
+* [Security Architecture](#-security-architecture)
+* [Installation](#-installation)
+* [Configuration](#-configuration)
+* [Development](#-development)
+* [Git Workflow](#-git-workflow)
+* [Testing](#-testing)
+* [Logging & Observability](#-logging--observability)
+* [Deployment](#-deployment)
+* [Scalability](#-scalability)
+* [Multi-University Architecture](#-multi-university-architecture)
+* [Product Roadmap](#-product-roadmap)
+* [Business Model](#-business-model)
+* [Engineering Definition of Done](#-engineering-definition-of-done)
+* [Contributing](#-contributing)
+* [Security Reporting](#-security-reporting)
+* [License](#-license)
+* [About AYGLOBE INC](#-about-ayglobe-inc)
 
 ---
 
 # 🌍 Vision
 
-WEZO CAMPUS HUB is being built around a simple idea:
+WEZO CAMPUS HUB is built around one core idea:
 
 > **University life should have a digital home.**
 
-Students currently depend on disconnected platforms for:
+Students currently depend on disconnected systems for academic materials, communication, commerce, accommodation, announcements, events, and campus services.
 
-- Academic materials
-- Campus announcements
-- Student communities
-- Buying and selling
-- Accommodation
-- Events
-- Communication
-- Student identity
-- Campus services
+WEZO CAMPUS HUB aims to bring these experiences together through a modular digital campus ecosystem.
 
-WEZO CAMPUS HUB aims to consolidate these experiences into a single student-oriented ecosystem.
-
-The long-term objective is to create a scalable campus infrastructure that can begin with one university and evolve into a multi-campus and multi-university platform.
+### Long-Term Direction
 
 ```text
                          WEZO CAMPUS HUB
                                 │
-        ┌───────────────────────┼───────────────────────┐
-        │                       │                       │
-     ACADEMIC                CAMPUS                 COMMERCE
-        │                       │                       │
-   ┌────┴────┐             ┌────┴────┐            ┌────┴────┐
-   │         │             │         │            │         │
- Notes   Resources     Profiles  Announcements  Marketplace Services
-   │         │             │         │            │         │
-   └─────────┴─────────────┴─────────┴────────────┴─────────┘
+          ┌─────────────────────┼─────────────────────┐
+          │                     │                     │
+          ▼                     ▼                     ▼
+      ACADEMIC                CAMPUS              COMMERCE
+          │                     │                     │
+     ┌────┴────┐           ┌────┴────┐          ┌────┴────┐
+     │         │           │         │          │         │
+   Notes   Resources    Profiles  Notices    Marketplace Services
+     │         │           │         │          │         │
+     └─────────┴───────────┴─────────┴──────────┴─────────┘
                                 │
                                 ▼
-                       CAMPUS SERVICES
+                         CAMPUS SERVICES
                                 │
-                     ┌──────────┼──────────┐
-                     │          │          │
-                  Hostels     Admin     Payments
-                     │          │          │
-                     └──────────┼──────────┘
+                    ┌───────────┼───────────┐
+                    ▼           ▼           ▼
+                 Hostels      Admin      Payments
+                    │           │           │
+                    └───────────┼───────────┘
                                 │
                                 ▼
                          PLATFORM CORE
-💡 Product Overview
+```
 
-WEZO CAMPUS HUB is designed as a centralized digital environment for university communities.
+The product is intended to evolve from a campus platform into a scalable multi-university infrastructure.
 
-Instead of building another generic social network or another generic marketplace, the platform focuses specifically on the needs of students and campus communities.
+---
 
-The product is organized around several major domains:
+# 💡 Product Overview
 
-🎓 Academic
-Study materials
-Notes
-Academic resources
-Course-related content
-Future intelligent study tools
-🏫 Campus
-Announcements
-Campus information
-Student profiles
-Community services
-Future events and organizations
-🛒 Commerce
-Student marketplace
-Product listings
-Seller profiles
-Campus-oriented commerce
-Future payment integration
-🏠 Accommodation
-Hostel discovery
-Accommodation information
-Location discovery
-Pricing information
-Future verification and reviews
-🛡️ Administration
-User management
-Content management
-Moderation
-Platform statistics
-Administrative controls
-❗ The Problem
+WEZO CAMPUS HUB is designed around several connected domains.
+
+## 🎓 Academic
+
+* Study notes
+* Academic resources
+* Course materials
+* Revision resources
+* Search and discovery
+* Future AI-assisted learning
+
+## 🏫 Campus
+
+* Student profiles
+* Announcements
+* Campus information
+* Events
+* Communities
+* Student organizations
+
+## 🛒 Commerce
+
+* Student marketplace
+* Product listings
+* Seller profiles
+* Campus-oriented commerce
+* Future payment infrastructure
+
+## 🏠 Accommodation
+
+* Hostel discovery
+* Accommodation listings
+* Pricing
+* Amenities
+* Location information
+* Future verification and reviews
+
+## 🛡️ Administration
+
+* User management
+* Content management
+* Moderation
+* Platform statistics
+* Security controls
+* System configuration
+
+---
+
+# ❗ The Problem
 
 University students frequently operate across fragmented digital systems.
 
-A typical student may use:
+A typical workflow can look like:
 
-WhatsApp
-   +
+```text
 University Portal
-   +
+       +
+WhatsApp
+       +
 Google Drive
-   +
+       +
 Social Media
-   +
+       +
 Marketplace Groups
-   +
+       +
 Hostel Agents
-   +
-Payment Apps
-   +
+       +
+Payment Applications
+       +
 Email
+```
 
-This creates several problems:
+This fragmentation creates:
 
-Information fragmentation
-Poor discoverability
-Repeated communication
-Unstructured academic resources
-Low trust in student commerce
-Difficult accommodation discovery
-Limited campus-specific tooling
+* Information silos
+* Poor discoverability
+* Repeated communication
+* Unstructured academic resources
+* Limited campus-specific services
+* Trust problems in student commerce
+* Difficult accommodation discovery
+* Multiple identities and accounts
 
 WEZO CAMPUS HUB is designed to reduce this fragmentation.
 
-💎 The Solution
+---
 
-WEZO CAMPUS HUB provides a unified campus environment.
+# 💎 The Solution
 
-                         STUDENT
-                            │
-                            ▼
-                    WEZO CAMPUS HUB
-                            │
-        ┌───────────────────┼───────────────────┐
-        │                   │                   │
-        ▼                   ▼                   ▼
-     ACADEMIC             CAMPUS            MARKETPLACE
-        │                   │                   │
-        ▼                   ▼                   ▼
-     Resources          Community          Products
-        │                   │                   │
-        └───────────────────┼───────────────────┘
-                            │
-                            ▼
-                     CAMPUS SERVICES
-                            │
-             ┌──────────────┼──────────────┐
-             ▼              ▼              ▼
-          Hostels         Admin         Payments
+The platform creates one connected campus environment.
 
-The goal is not simply to provide many features.
-
-The goal is to create one coherent student experience.
-
-🧩 Product Modules
-🎓 1. Student Dashboard
-
-The dashboard acts as the primary entry point into the campus ecosystem.
-
-The long-term dashboard experience is intended to provide:
-
-Personalized student information
-Academic shortcuts
-Campus announcements
-Marketplace activity
-Accommodation discovery
-Notifications
-Account management
-Platform statistics where appropriate
-
-The dashboard should remain focused and avoid becoming an overloaded interface.
-
-📚 2. Study Notes
-
-A structured academic resource environment for students.
-
-Potential capabilities include:
-
-Course notes
-Revision materials
-Student-created resources
-Document organization
-Search
-Categorization
-Resource moderation
-
-The objective is to turn scattered academic files into a discoverable knowledge base.
-
-📖 3. Academic Resources
-
-Academic resources extend beyond simple notes.
-
-The platform can eventually support:
-
-Course resources
-Revision materials
-Study guides
-Reference documents
-Academic links
-Course organization
-Future AI-assisted discovery
-🛒 4. Student Marketplace
-
-A campus-focused marketplace designed around student-to-student commerce.
-
-Potential capabilities include:
-
-Product listings
-Categories
-Search
-Filtering
-Seller profiles
-Listing management
-Product images
-Seller contact mechanisms
-Reporting
-Moderation
-Future integrated payments
-
-The marketplace is intended to remain campus-oriented rather than becoming a generic e-commerce platform.
-
-🏠 5. Hostel & Accommodation Discovery
-
-A dedicated accommodation discovery experience for students.
-
-Potential capabilities include:
-
-Hostel listings
-Accommodation details
-Pricing
-Location information
-Amenities
-Availability information
-Student reviews
-Verification mechanisms
-
-Future versions may introduce stronger trust and verification systems for accommodation providers.
-
-👤 6. Student Profiles
-
-Student profiles form part of the platform's identity layer.
-
-Potential profile information includes:
-
-Display name
-Student information
-Campus affiliation
-Profile image
-Marketplace identity
-Community participation
-
-Privacy should remain a core design requirement.
-
-Only information necessary for the relevant product experience should be publicly exposed.
-
-📢 7. Campus Announcements
-
-A centralized communication channel for important campus information.
-
-Potential announcement categories include:
-
-Academic notices
-Campus updates
-Events
-Student organization announcements
-Deadlines
-General notices
-
-Administrative controls should determine who can publish official announcements.
-
-📊 8. Campus Statistics
-
-The administrative ecosystem can expose platform-level statistics.
-
-Examples include:
-
-Registered users
-Active users
-Resource counts
-Marketplace activity
-Accommodation listings
-Announcement activity
-Platform engagement
-
-Statistics should be permission-controlled and should not expose sensitive user information unnecessarily.
-
-🛡️ 9. Administration
-
-The administrative layer is responsible for platform governance.
-
-Potential administrative capabilities include:
-
-User management
-Role management
-Content moderation
-Marketplace moderation
-Academic resource management
-Announcement management
-System statistics
-Security monitoring
-Platform configuration
-
-Administrative operations should be protected using strict authorization controls.
-
-💰 10. Future Financial Infrastructure
-
-Financial functionality is part of the long-term product roadmap.
-
-Potential future capabilities include:
-
-Payment processing
-Transaction records
-Wallet infrastructure
-Marketplace payments
-Subscription services
-Platform monetization
-Financial reporting
-
-Financial features will require additional security, fraud prevention, compliance, reconciliation, and operational controls before production use.
-
-👥 User Experience Model
-
-The platform is designed around multiple levels of access.
-
-                         WEZO CAMPUS
+```text
+                           STUDENT
                               │
-             ┌────────────────┼────────────────┐
-             │                │                │
-             ▼                ▼                ▼
-          STUDENT         MODERATOR        ADMINISTRATOR
-             │                │                │
-             ▼                ▼                ▼
-       Student Tools     Content Review    Platform Control
+                              ▼
+                      WEZO CAMPUS HUB
+                              │
+       ┌──────────────────────┼──────────────────────┐
+       │                      │                      │
+       ▼                      ▼                      ▼
+    ACADEMIC                CAMPUS              MARKETPLACE
+       │                      │                      │
+       ▼                      ▼                      ▼
+   Resources              Community             Products
+       │                      │                      │
+       └──────────────────────┼──────────────────────┘
+                              │
+                              ▼
+                       CAMPUS SERVICES
+                              │
+                ┌─────────────┼─────────────┐
+                ▼             ▼             ▼
+             Hostels        Admin        Payments
+```
 
-The authorization model should follow the principle:
+The objective is not simply to build a platform with many features.
 
-Users receive only the permissions required for their role.
+The objective is to create a **coherent student experience**.
 
-🏗️ System Architecture
+---
 
-WEZO CAMPUS HUB follows a modular PHP architecture.
+# 🧩 Product Ecosystem
 
+## 1. Student Dashboard
+
+The dashboard is the primary entry point into the campus ecosystem.
+
+The long-term dashboard can provide:
+
+* Personalized student information
+* Academic shortcuts
+* Campus announcements
+* Marketplace activity
+* Accommodation discovery
+* Notifications
+* Account management
+* Relevant platform statistics
+
+The dashboard should remain focused rather than becoming an overloaded interface.
+
+---
+
+## 2. Study Notes
+
+A structured academic resource environment.
+
+Potential capabilities:
+
+* Course notes
+* Revision materials
+* Student-created resources
+* Resource categorization
+* Search
+* Filtering
+* Moderation
+* Resource management
+
+---
+
+## 3. Academic Resources
+
+Academic resources extend beyond ordinary notes.
+
+Potential capabilities:
+
+* Course resources
+* Study guides
+* Revision documents
+* Reference materials
+* Academic links
+* Course organization
+* Intelligent discovery
+
+---
+
+## 4. Student Marketplace
+
+A campus-focused marketplace for student-to-student commerce.
+
+Potential capabilities:
+
+* Product listings
+* Categories
+* Search
+* Filtering
+* Seller profiles
+* Product images
+* Listing management
+* Reporting
+* Moderation
+* Future integrated payments
+
+The marketplace is designed to remain campus-oriented rather than becoming a generic e-commerce platform.
+
+---
+
+## 5. Hostel & Accommodation Discovery
+
+A dedicated accommodation discovery system.
+
+Potential capabilities:
+
+* Hostel listings
+* Accommodation details
+* Pricing
+* Location
+* Amenities
+* Availability
+* Reviews
+* Verification
+
+Future versions may introduce stronger trust mechanisms for accommodation providers.
+
+---
+
+## 6. Student Profiles
+
+Student profiles form part of the platform identity layer.
+
+Potential information includes:
+
+* Display name
+* Campus affiliation
+* Profile image
+* Student information
+* Marketplace identity
+* Community participation
+
+Privacy should remain a core architectural requirement.
+
+Only information required for the relevant experience should be publicly exposed.
+
+---
+
+## 7. Campus Announcements
+
+A centralized communication layer for campus information.
+
+Potential categories:
+
+* Academic notices
+* Campus updates
+* Events
+* Student organizations
+* Deadlines
+* General notices
+
+Official announcements should be permission-controlled.
+
+---
+
+## 8. Administration
+
+The administrative system provides platform governance.
+
+Potential capabilities:
+
+* User management
+* Role management
+* Content moderation
+* Marketplace moderation
+* Academic resource management
+* Announcement management
+* Platform statistics
+* Security monitoring
+* System configuration
+
+Administrative functionality must use strict authorization.
+
+---
+
+## 9. Financial Infrastructure
+
+Financial functionality is part of the long-term roadmap.
+
+Potential capabilities:
+
+* Payment processing
+* Transaction records
+* Wallet infrastructure
+* Marketplace payments
+* Subscriptions
+* Financial reporting
+* Platform monetization
+
+Financial features require additional controls for security, fraud prevention, reconciliation, compliance, and operational reliability before production use.
+
+---
+
+## 10. AI & Intelligent Services
+
+AI is planned as an extension of the campus ecosystem rather than as a replacement for the platform's core architecture.
+
+Potential capabilities:
+
+* AI study assistant
+* Intelligent search
+* Academic recommendations
+* Resource discovery
+* Personalized learning assistance
+* Student analytics
+
+AI services should remain modular and independently replaceable.
+
+---
+
+# 🏗️ Architecture
+
+WEZO CAMPUS HUB follows a modular application architecture.
+
+```text
 ┌───────────────────────────────────────────────┐
-│                  CLIENT                       │
-│          HTML • CSS • JavaScript              │
+│                   CLIENT                      │
+│             HTML / CSS / JavaScript           │
 └───────────────────────┬───────────────────────┘
                         │
                         ▼
 ┌───────────────────────────────────────────────┐
 │              PUBLIC APPLICATION               │
-│             Request / Response Layer          │
+│          Request / Response Layer             │
 └───────────────────────┬───────────────────────┘
                         │
                         ▼
 ┌───────────────────────────────────────────────┐
-│                   API                         │
-│          Application Interfaces               │
+│                     API                       │
+│           Application Interfaces              │
 └───────────────────────┬───────────────────────┘
                         │
                         ▼
 ┌───────────────────────────────────────────────┐
-│                  CORE                         │
-│        Business Logic / Services / Auth       │
+│                    CORE                       │
+│    Authentication / Services / Business Logic │
 └───────────────────────┬───────────────────────┘
                         │
                         ▼
 ┌───────────────────────────────────────────────┐
-│                 DATABASE                      │
-│             MySQL / Data Layer                │
+│                  DATABASE                     │
+│                    MySQL                      │
 └───────────────────────────────────────────────┘
+```
 
-The repository structure reflects this separation.
+---
 
-📁 Repository Structure
+# 🧱 Architectural Layers
+
+## Presentation Layer
+
+Responsible for:
+
+* HTML
+* CSS
+* JavaScript
+* Templates
+* Public UI
+
+Located primarily around:
+
+```text
+public/
+templates/
+```
+
+---
+
+## Application Layer
+
+Responsible for:
+
+* Request handling
+* Application workflows
+* API operations
+* Domain coordination
+
+Located primarily around:
+
+```text
+api/
+core/
+```
+
+---
+
+## Business Logic Layer
+
+Responsible for:
+
+* Business rules
+* Validation
+* Authorization
+* Domain services
+* Application policies
+
+Primarily organized through:
+
+```text
+core/
+```
+
+---
+
+## Persistence Layer
+
+Responsible for:
+
+* Database connections
+* Queries
+* Data access
+* Transactions
+* Schema management
+
+Located around:
+
+```text
+database/
+```
+
+---
+
+## Administration Layer
+
+Responsible for privileged platform operations.
+
+```text
+admin/
+```
+
+Administration must remain isolated from ordinary student functionality.
+
+---
+
+# 📁 Repository Structure
+
+```text
 wezo-campus/
 │
 ├── admin/
-│   └── Administrative application functionality
+│   └── Administrative functionality
 │
 ├── api/
 │   └── API endpoints and application interfaces
 │
 ├── core/
-│   └── Core application logic and reusable services
+│   └── Core services and business logic
 │
 ├── database/
-│   └── Database resources, schema, and persistence logic
+│   └── Database schema, resources and persistence
 │
 ├── email_previews/
 │   └── Email templates and preview resources
 │
 ├── logs/
-│   └── Application logs and runtime records
+│   └── Application and runtime logs
 │
 ├── public/
-│   └── Public-facing application assets
+│   └── Public-facing application resources
 │
 ├── templates/
 │   └── Reusable presentation templates
@@ -469,186 +577,232 @@ wezo-campus/
 │   └── PHP installation entry point
 │
 ├── install.sh
-│   └── Shell-based installation helper
+│   └── Shell installation helper
 │
 └── README.md
     └── Project documentation
-Directory Responsibilities
-Directory	Responsibility
-admin/	Administrative functionality
-api/	API and application endpoints
-core/	Shared application logic
-database/	Database resources and persistence
-email_previews/	Email-related previews/templates
-logs/	Application/runtime logging
-public/	Public application resources
-templates/	Reusable presentation templates
+```
 
-This separation is intended to reduce coupling and make future development easier.
+### Directory Responsibilities
 
-🛠️ Technology Stack
-Layer	Technology
-Backend	PHP
-Database	MySQL
-Frontend	HTML
-Styling	CSS
-Client-side behavior	JavaScript
-Web Server	Apache / PHP-compatible server
-Installation	PHP / Shell
-Version Control	Git
-Repository	GitHub
+| Directory         | Responsibility                     |
+| ----------------- | ---------------------------------- |
+| `admin/`          | Administrative functionality       |
+| `api/`            | API endpoints and interfaces       |
+| `core/`           | Shared business logic and services |
+| `database/`       | Database resources and persistence |
+| `email_previews/` | Email previews and templates       |
+| `logs/`           | Runtime and application logs       |
+| `public/`         | Public application resources       |
+| `templates/`      | Reusable presentation templates    |
 
-The stack is intentionally lightweight at the current stage, allowing the product to evolve without unnecessary infrastructure complexity.
+---
 
-🧠 Architecture Principles
-1. Separation of Concerns
+# 🛠️ Technology Stack
 
-Presentation, application logic, data access, authentication, and administration should remain appropriately separated.
+| Layer              | Technology                     |
+| ------------------ | ------------------------------ |
+| Backend            | PHP                            |
+| Database           | MySQL                          |
+| Frontend           | HTML                           |
+| Styling            | CSS                            |
+| Client-side Logic  | JavaScript                     |
+| Web Server         | Apache / PHP-compatible server |
+| Installation       | PHP / Shell                    |
+| Version Control    | Git                            |
+| Repository Hosting | GitHub                         |
 
+The current stack intentionally remains lightweight while preserving a path toward larger infrastructure.
+
+---
+
+# 🧠 Engineering Principles
+
+## Separation of Concerns
+
+```text
 Presentation
-      ↓
+     ↓
 Application
-      ↓
+     ↓
 Business Logic
-      ↓
+     ↓
 Data Access
-      ↓
+     ↓
 Database
-2. Modular Design
+```
 
-Each product domain should be independently maintainable.
+Each layer should have a clear responsibility.
 
-For example:
+---
 
+## Modular Design
+
+Major domains should remain independently maintainable.
+
+```text
 Academic
 Marketplace
 Hostels
 Profiles
 Announcements
 Administration
+Payments
+AI
+```
 
-should not become one tightly coupled codebase.
+Modules should communicate through clearly defined interfaces.
 
-3. API-Ready Architecture
+---
 
-The platform should expose core functionality through well-defined interfaces so future clients can consume the system.
+## API-Ready Architecture
 
-Potential future clients:
+Core functionality should be accessible through stable interfaces so future clients can consume the same backend.
 
-Web
- │
- ├── Android
- ├── iOS
- ├── PWA
- └── External Integrations
-4. Security by Default
+```text
+                 BACKEND
+                    │
+        ┌───────────┼───────────┐
+        ▼           ▼           ▼
+       Web       Android       iOS
+                    │
+                    ▼
+                   PWA
+```
 
-Security should be considered during architecture and implementation rather than after development.
+---
 
-5. Maintainability
+## Security by Default
 
-Code should prioritize:
+Security controls should be designed into features from the beginning.
 
-Readability
-Predictability
-Reusability
-Testability
-Clear naming
-Small responsibilities
-6. Scalability
+---
 
-The architecture should permit progression from:
+## Maintainability
 
+Prioritize:
+
+* Readability
+* Predictability
+* Reusability
+* Testability
+* Clear naming
+* Small responsibilities
+* Explicit dependencies
+
+---
+
+## Scalability
+
+The architecture should support:
+
+```text
 One Campus
-     ↓
+    ↓
 Multiple Campuses
-     ↓
+    ↓
 Multiple Universities
-     ↓
+    ↓
 Regional Platform
-     ↓
-Pan-African Student Ecosystem
-🔐 Authentication & Authorization
+    ↓
+Large-Scale Student Ecosystem
+```
 
-Authentication determines who the user is.
+---
 
-Authorization determines what the user is allowed to do.
+# 🔐 Authentication & Authorization
 
-These responsibilities should remain separate.
+Authentication answers:
 
+> Who is this user?
+
+Authorization answers:
+
+> What is this user allowed to do?
+
+The architecture should keep these responsibilities separate.
+
+```text
 Login
-  │
-  ▼
+  ↓
 Authentication
-  │
-  ▼
+  ↓
 Identity
-  │
-  ▼
+  ↓
 Role / Permission Check
-  │
-  ▼
+  ↓
 Authorized Action
+```
 
-Potential roles include:
+Potential roles:
 
+```text
 STUDENT
 MODERATOR
 ADMINISTRATOR
+```
 
-Future implementations may introduce more granular permission systems.
+Future implementations can introduce granular permissions.
 
-🔌 API Architecture
+---
 
-The api/ layer is intended to provide a stable interface between clients and backend functionality.
+# 🔌 API Architecture
 
-A future API structure may follow:
+The `api/` layer is intended to provide a stable interface between clients and backend services.
 
+A scalable organization may follow:
+
+```text
 /api
    │
-   ├── /auth
+   ├── auth/
    │
-   ├── /users
+   ├── users/
    │
-   ├── /students
+   ├── students/
    │
-   ├── /notes
+   ├── notes/
    │
-   ├── /resources
+   ├── resources/
    │
-   ├── /marketplace
+   ├── marketplace/
    │
-   ├── /hostels
+   ├── hostels/
    │
-   ├── /announcements
+   ├── announcements/
    │
-   └── /admin
+   ├── payments/
+   │
+   └── admin/
+```
 
-API design should prioritize:
+Future versioning:
 
-Consistent responses
-Input validation
-Authentication
-Authorization
-Error handling
-Rate limiting
-Logging
-Versioning
-
-Future API versions may use:
-
+```text
 /api/v1/
+```
 
-to allow backward-compatible evolution.
+API standards should include:
 
-🗄️ Database Architecture
+* Authentication
+* Authorization
+* Input validation
+* Consistent responses
+* Error handling
+* Rate limiting
+* Logging
+* Versioning
+* Request tracing where appropriate
 
-WEZO CAMPUS HUB uses MySQL as its primary relational database.
+---
 
-The data model is expected to grow around major platform domains.
+# 🗄️ Database Architecture
+
+MySQL is the primary relational database.
 
 A conceptual model:
 
+```text
 Users
  │
  ├── Profiles
@@ -661,41 +815,57 @@ Users
  │
  ├── Announcements
  │
- └── Platform Activity
+ ├── Transactions
+ │
+ └── Activity
+```
 
-Future database engineering should prioritize:
+Database engineering should prioritize:
 
-Foreign keys
-Indexes
-Transactions
-Constraints
-Migrations
-Data validation
-Audit records
-Soft deletion where appropriate
-Backup procedures
-🔒 Security
+* Foreign keys
+* Indexes
+* Constraints
+* Transactions
+* Prepared statements
+* Migrations
+* Data validation
+* Audit records
+* Soft deletion where appropriate
+* Backup procedures
+
+---
+
+# 🔒 Security Architecture
 
 Security is a first-class engineering requirement.
 
-Password Security
+## Password Security
 
 Passwords must never be stored in plaintext.
 
-Use strong password hashing mechanisms provided by PHP.
+Use PHP's secure password hashing APIs.
 
-SQL Injection Protection
+---
 
-Database operations should use prepared statements and parameterized queries.
+## SQL Injection Prevention
 
-Avoid constructing SQL using raw user input.
+Use:
 
-Input Validation
+* Prepared statements
+* Parameterized queries
+* Strict input validation
 
-All external input should be treated as untrusted.
+Never concatenate raw user input into SQL statements.
 
-Recommended flow:
+---
 
+## Input Validation
+
+All external input is untrusted.
+
+Recommended pipeline:
+
+```text
 Incoming Input
       ↓
 Validation
@@ -707,92 +877,127 @@ Authorization
 Business Logic
       ↓
 Database
-Cross-Site Scripting Protection
+```
 
-User-generated content must be safely escaped before being rendered into HTML.
+---
 
-Session Security
+## XSS Protection
 
-Production deployments should use secure session configuration including:
+User-generated content must be appropriately escaped and sanitized before HTML rendering.
 
-Secure cookies
-HttpOnly cookies
-Appropriate SameSite settings
-Session regeneration after authentication
-Session expiration
-Logout invalidation
-CSRF Protection
+---
 
-State-changing browser requests should use CSRF protection where applicable.
+## Session Security
 
-Secrets Management
+Production deployments should use:
+
+* Secure cookies
+* HttpOnly cookies
+* Appropriate SameSite settings
+* Session regeneration after authentication
+* Session expiration
+* Logout invalidation
+
+---
+
+## CSRF Protection
+
+Browser-based state-changing operations should use CSRF protection where applicable.
+
+---
+
+## Secrets Management
 
 Never commit:
 
+```text
 Passwords
 API Keys
 Database Credentials
 SMTP Credentials
 Payment Credentials
+Private Keys
 Production Secrets
-Private Certificates
+```
 
-Recommended environment-specific configuration:
+Environment-specific configuration should be kept outside source control.
 
-.env
-.env.local
-.env.production
+---
 
-These files should never be committed to the repository.
+# ⚙️ Installation
 
-⚙️ Installation
-Requirements
+## Requirements
 
-A local development environment should provide:
+Development environments should provide:
 
-PHP
-MySQL
-Apache or another compatible web server
-Git
-Shell access for install.sh
+* PHP
+* MySQL
+* Apache or another compatible web server
+* Git
+* Shell access for `install.sh`
 
 Verify PHP:
 
+```bash
 php --version
+```
 
 Verify Git:
 
+```bash
 git --version
+```
 
 Verify MySQL:
 
+```bash
 mysql --version
-📥 Clone the Repository
+```
+
+---
+
+# 📥 Clone
+
+```bash
 git clone https://github.com/Ayman-muhammad/wezo-campus.git
-
-Enter the project:
-
 cd wezo-campus
-▶️ Installation
+```
 
-The repository provides two installation entry points:
+---
 
+# ▶️ Installation
+
+The repository contains two installation entry points:
+
+```text
 install.php
 install.sh
-PHP installer
+```
+
+PHP installer:
+
+```bash
 php install.php
-Shell installer
+```
+
+Shell installer:
+
+```bash
 chmod +x install.sh
 ./install.sh
+```
 
-Installation behavior should always be verified against the current implementation before production deployment.
+> Installation behavior should always be validated against the current implementation before production deployment.
 
-⚙️ Configuration
+---
 
-Configuration should be separated from source code.
+# ⚙️ Configuration
 
-Typical production configuration may include:
+Application configuration should be separated from source code.
 
+Typical configuration categories include:
+
+```text
 APP_ENV
 APP_DEBUG
 APP_URL
@@ -807,18 +1012,24 @@ MAIL_HOST
 MAIL_PORT
 MAIL_USERNAME
 MAIL_PASSWORD
+```
 
-Example production principles:
+Production should use:
 
+```text
 APP_ENV=production
 APP_DEBUG=false
+```
 
-Never expose database credentials or application secrets through publicly accessible files.
+Never expose secrets through publicly accessible application files.
 
-💻 Local Development
+---
 
-A typical local workflow is:
+# 💻 Local Development
 
+A typical development workflow:
+
+```bash
 git clone https://github.com/Ayman-muhammad/wezo-campus.git
 
 cd wezo-campus
@@ -826,48 +1037,59 @@ cd wezo-campus
 php --version
 
 mysql --version
+```
 
-Configure the local database and application environment according to the current implementation.
+Configure the development database and application environment according to the current implementation.
 
-For simple PHP development environments, the built-in PHP server may be useful during development:
+For a simple PHP development environment:
 
+```bash
 php -S localhost:8000 -t public
+```
 
-If the application requires Apache-specific configuration, URL rewriting, or server modules, use the project's supported web-server configuration instead.
+If the application depends on Apache modules, URL rewriting, or server-specific configuration, use the supported web-server setup instead.
 
-🧪 Testing Strategy
+---
+
+# 🧪 Testing Strategy
 
 The project should progressively adopt automated testing.
 
-The target testing pyramid is:
+Target testing pyramid:
 
-                    E2E
-                   /   \
-                  /     \
-             Integration
-                /       \
-               /         \
-             Unit Tests
-Unit Tests
+```text
+                 E2E
+                /   \
+               /     \
+        Integration Tests
+             /       \
+            /         \
+           Unit Tests
+```
+
+## Unit Tests
 
 Test isolated:
 
-Services
-Utility functions
-Validation
-Business rules
-Integration Tests
+* Services
+* Utilities
+* Validators
+* Business rules
+
+## Integration Tests
 
 Test:
 
-Database interactions
-Authentication flows
-API endpoints
-Service integration
-End-to-End Tests
+* Database interactions
+* Authentication
+* API endpoints
+* Service integrations
 
-Test critical user journeys:
+## End-to-End Tests
 
+Test critical journeys:
+
+```text
 Registration
      ↓
 Authentication
@@ -879,128 +1101,89 @@ Academic Resource
 Marketplace
      ↓
 Logout
-📋 Code Quality
+```
 
-Before merging a feature, developers should verify:
+---
 
-[ ] Feature works
-[ ] Existing functionality still works
-[ ] Input is validated
-[ ] Authorization is enforced
-[ ] Database queries are safe
-[ ] Errors are handled
-[ ] Sensitive data is protected
-[ ] Documentation is updated
-[ ] Logs do not expose secrets
-[ ] Git diff has been reviewed
-📝 Logging & Observability
+# 🧹 Code Quality
 
-The repository contains a dedicated:
+Before merging a feature:
 
+```text
+Feature works
+Input is validated
+Authorization is enforced
+Database queries are safe
+Errors are handled
+Sensitive data is protected
+Tests pass
+Documentation is updated
+Logs contain no secrets
+Git diff has been reviewed
+```
+
+---
+
+# 📊 Logging & Observability
+
+The repository contains:
+
+```text
 logs/
+```
 
-directory.
+Logging should help identify:
 
-Application logging should help developers understand:
+* Application failures
+* Authentication failures
+* API failures
+* Database failures
+* Unexpected exceptions
+* Security events
 
-Application failures
-Authentication failures
-API failures
-Database failures
-Unexpected exceptions
-Security-relevant events
+Logs must never expose:
 
-Logs must never contain sensitive information such as:
-
+```text
 Passwords
 Authentication Tokens
 API Secrets
 Payment Credentials
 Private Keys
+```
 
-Production logging should also include appropriate retention and rotation policies.
+As the platform grows, observability should expand toward:
 
-🔄 Git Development Workflow
+```text
+Availability
+ ├── Uptime
+ ├── Response Time
+ └── Error Rate
 
-WEZO CAMPUS HUB uses Git for version control.
+Application
+ ├── Exceptions
+ ├── API Failures
+ └── Authentication Failures
 
-Check repository state
-git status
-Create a feature branch
-git checkout -b feature/marketplace-search
-Stage changes
-git add .
-Commit changes
-git commit -m "feat: add marketplace search"
-Push branch
-git push -u origin feature/marketplace-search
-🌿 Branch Strategy
+Database
+ ├── Query Performance
+ ├── Connections
+ └── Storage
 
-Recommended branch categories:
+Security
+ ├── Failed Logins
+ ├── Suspicious Activity
+ └── Privilege Violations
+```
 
-main
-│
-├── feature/*
-├── fix/*
-├── refactor/*
-├── docs/*
-├── security/*
-└── chore/*
-main
+---
 
-Stable integration branch.
+# 🚀 Deployment
 
-feature/*
+WEZO CAMPUS HUB is designed for PHP-compatible hosting.
 
-New functionality.
+Basic architecture:
 
-fix/*
-
-Bug fixes.
-
-refactor/*
-
-Internal architectural improvements.
-
-security/*
-
-Security-related changes.
-
-docs/*
-
-Documentation changes.
-
-🏷️ Commit Convention
-
-Recommended commit prefixes:
-
-Prefix	Purpose
-feat:	New feature
-fix:	Bug fix
-docs:	Documentation
-refactor:	Code restructuring
-test:	Tests
-security:	Security changes
-chore:	Maintenance
-perf:	Performance improvement
-
-Examples:
-
-git commit -m "feat: add hostel discovery"
-
-git commit -m "fix: resolve authentication session issue"
-
-git commit -m "docs: update installation guide"
-
-git commit -m "refactor: separate marketplace services"
-
-git commit -m "security: strengthen admin authorization"
-🚀 Deployment
-
-WEZO CAMPUS HUB is designed for PHP-compatible hosting infrastructure.
-
-A basic production deployment can be represented as:
-
+```text
                     INTERNET
                        │
                        ▼
@@ -1020,9 +1203,11 @@ A basic production deployment can be represented as:
                 │    MySQL    │
                 │  Database   │
                 └─────────────┘
+```
 
 Before production deployment:
 
+```text
 [ ] HTTPS enabled
 [ ] Debug mode disabled
 [ ] Production secrets configured
@@ -1035,19 +1220,24 @@ Before production deployment:
 [ ] Error handling verified
 [ ] Public files reviewed
 [ ] Sensitive files inaccessible
-📈 Scalability Architecture
+```
 
-WEZO CAMPUS HUB is being designed with long-term growth in mind.
+---
 
-The initial deployment can be simple:
+# 📈 Scalability
 
+Initial deployment:
+
+```text
 Application
      │
      ▼
 MySQL
+```
 
-As usage increases, the architecture can evolve:
+Potential future architecture:
 
+```text
                     Load Balancer
                          │
           ┌──────────────┼──────────────┐
@@ -1056,128 +1246,164 @@ As usage increases, the architecture can evolve:
           │              │              │
           └──────────────┼──────────────┘
                          │
-                     Cache Layer
+                    Cache Layer
                          │
                          ▼
                     Database
-                         │
-                  ┌──────┴──────┐
-                  ▼             ▼
-               Primary       Replica
+                    /        \
+                   ▼          ▼
+               Primary      Replica
+```
 
 Future infrastructure may introduce:
 
-Application caching
-Database indexing
-Read replicas
-Background workers
-Queue systems
-Object storage
-Search infrastructure
-CDN integration
-Centralized monitoring
-Horizontal scaling
-🌐 Multi-Campus Architecture
+* Application caching
+* Database indexing
+* Read replicas
+* Background workers
+* Queues
+* Object storage
+* Search infrastructure
+* CDN
+* Centralized monitoring
+* Horizontal scaling
 
-The long-term platform is intended to support more than one campus.
+---
 
-A future multi-tenant architecture could conceptually follow:
+# 🌐 Multi-University Architecture
 
+The long-term platform is intended to support multiple institutions.
+
+Conceptual architecture:
+
+```text
                        WEZO PLATFORM
-                             │
-              ┌──────────────┼──────────────┐
-              │              │              │
-              ▼              ▼              ▼
-          University A   University B   University C
-              │              │              │
-          ┌───┴───┐      ┌───┴───┐      ┌───┴───┐
-          │       │      │       │      │       │
-        Campus 1 Campus 2 Campus 1 Campus 2 Campus 1
+                              │
+              ┌───────────────┼───────────────┐
+              │               │               │
+              ▼               ▼               ▼
+        University A    University B    University C
+              │               │               │
+          ┌───┴───┐       ┌───┴───┐       ┌───┴───┐
+          ▼       ▼       ▼       ▼       ▼       ▼
+       Campus 1 Campus 2 Campus 1 Campus 2 Campus 1 Campus 2
+```
 
-This would allow the platform to maintain shared infrastructure while preserving institutional boundaries.
+A future multi-tenant architecture should provide:
 
-🗺️ Product Roadmap
-Phase 1 — Platform Foundation
- Repository structure
- Core application directories
- API directory
- Database directory
- Administration directory
- Installation scripts
- Documentation foundation
- Comprehensive automated testing
- Production hardening
-Phase 2 — Student Identity
- Registration
- Authentication
- Student profiles
- Role-based authorization
- Account management
- Session security
- Password recovery
-Phase 3 — Academic Ecosystem
- Notes
- Academic resources
- Course organization
- Resource search
- Resource categories
- Resource moderation
- Academic analytics
-Phase 4 — Student Marketplace
- Marketplace listings
- Categories
- Search
- Filtering
- Seller profiles
- Listing management
- Reporting
- Moderation
- Transaction infrastructure
-Phase 5 — Accommodation
- Hostel listings
- Location discovery
- Pricing
- Amenities
- Availability
- Verification
- Reviews
-Phase 6 — Campus Communication
- Announcements
- Notifications
- Events
- Student organizations
- Community features
- Moderation
-Phase 7 — Financial Infrastructure
- Payment architecture
- Transaction records
- Wallet infrastructure
- Payment integrations
- Marketplace payments
- Subscription infrastructure
- Financial reporting
+* Tenant isolation
+* Institution-level administration
+* Campus-level configuration
+* Shared platform infrastructure
+* Institution-specific data boundaries
+* Role isolation
+* Institutional analytics
+* Tenant-aware APIs
 
-Financial services require substantially higher security, compliance, fraud prevention, and operational controls than ordinary application features.
+---
 
-Phase 8 — Intelligence
- AI academic assistant
- Intelligent search
- Personalized recommendations
- Academic insights
- Student analytics
- AI-powered resource discovery
-Phase 9 — Multi-University Platform
- Multi-campus architecture
- University administration
- Institutional onboarding
- Tenant isolation
- University analytics
- Institutional APIs
- Regional expansion
-💰 Business Model
+# 🗺️ Product Roadmap
 
-WEZO CAMPUS HUB is designed to support multiple potential revenue channels.
+## Phase 1 — Platform Foundation
 
+* Repository architecture
+* Core application
+* API layer
+* Database layer
+* Administration
+* Installation
+* Documentation
+* Testing foundation
+* Security hardening
+* Production readiness
+
+## Phase 2 — Student Identity
+
+* Registration
+* Authentication
+* Student profiles
+* Role-based authorization
+* Account management
+* Password recovery
+* Session management
+
+## Phase 3 — Academic Ecosystem
+
+* Notes
+* Academic resources
+* Course organization
+* Resource search
+* Resource categories
+* Resource moderation
+* Academic analytics
+
+## Phase 4 — Marketplace
+
+* Listings
+* Categories
+* Search
+* Filtering
+* Seller profiles
+* Listing management
+* Reporting
+* Moderation
+* Transaction infrastructure
+
+## Phase 5 — Accommodation
+
+* Hostel listings
+* Location discovery
+* Pricing
+* Amenities
+* Availability
+* Verification
+* Reviews
+
+## Phase 6 — Campus Communication
+
+* Announcements
+* Notifications
+* Events
+* Student organizations
+* Communities
+* Moderation
+
+## Phase 7 — Financial Infrastructure
+
+* Payment architecture
+* Transaction records
+* Wallet infrastructure
+* Payment integrations
+* Marketplace payments
+* Subscription infrastructure
+* Financial reporting
+
+## Phase 8 — Intelligence
+
+* AI academic assistant
+* Intelligent search
+* Personalized recommendations
+* Academic insights
+* Student analytics
+* AI resource discovery
+
+## Phase 9 — Multi-University Platform
+
+* Multi-campus architecture
+* University administration
+* Institutional onboarding
+* Tenant isolation
+* University analytics
+* Institutional APIs
+* Regional expansion
+
+---
+
+# 💰 Business Model
+
+Potential revenue channels:
+
+```text
                        REVENUE
                           │
         ┌─────────────────┼─────────────────┐
@@ -1189,144 +1415,226 @@ WEZO CAMPUS HUB is designed to support multiple potential revenue channels.
         └─────────────────┼─────────────────┘
                           │
                           ▼
-                 Institutional Services
+                Institutional Services
                           │
                           ▼
                   Strategic Partnerships
+```
 
-Potential revenue channels include:
+Potential channels include:
 
-Premium Services
+### Premium Services
 
-Paid student productivity and academic tools.
+Paid productivity, academic, or student services.
 
-Advertising
+### Advertising
 
 Relevant campus-oriented advertising.
 
-Marketplace Services
+### Marketplace Services
 
-Potential transaction or premium listing services.
+Potential transaction and premium listing services.
 
-Institutional Partnerships
+### Institutional Partnerships
 
-Universities and organizations may eventually access institutional services.
+Services provided to universities and organizations.
 
-Subscriptions
+### Subscriptions
 
-Premium platform functionality.
+Premium platform capabilities.
 
-The commercial model will evolve based on user adoption, product validation, and operational requirements.
+The commercial model will evolve according to product validation, user adoption, and operational requirements.
 
-🧭 Product Principles
-Student First
+---
 
-The product should solve genuine student problems.
+# 🎯 Product Principles
 
-Trust First
+## Student First
 
-Student commerce, profiles, accommodation, and community interactions require strong trust mechanisms.
+Solve genuine student problems.
 
-Privacy by Design
+## Trust First
 
-Only necessary data should be collected and exposed.
+Commerce, accommodation, profiles, and communities require strong trust mechanisms.
 
-Modular by Design
+## Privacy by Design
 
-Product domains should remain independently maintainable.
+Collect and expose only necessary information.
 
-API First
+## Modular by Design
 
-Core functionality should be consumable by future clients.
+Keep product domains independently maintainable.
 
-Security by Default
+## API First
 
-Security controls should be integrated into architecture.
+Design core capabilities for multiple clients.
 
-Build for Scale
+## Security by Default
 
-Early engineering decisions should avoid unnecessary architectural dead ends.
+Integrate security into architecture.
 
-📊 Future Observability
+## Build for Scale
 
-As the platform grows, operational monitoring should cover:
+Avoid architectural decisions that unnecessarily block future growth.
 
-Availability
-    │
-    ├── Uptime
-    ├── Response Time
-    └── Error Rate
+## Evidence Over Claims
 
-Application
-    │
-    ├── Exceptions
-    ├── API Failures
-    └── Authentication Failures
+Documentation must distinguish implemented functionality from planned functionality.
 
-Database
-    │
-    ├── Query Performance
-    ├── Connections
-    └── Storage
+---
 
-Security
-    │
-    ├── Failed Logins
-    ├── Suspicious Activity
-    └── Privilege Violations
+# ✅ Engineering Definition of Done
 
-The objective is to make operational questions answerable quickly:
-
-Is the platform healthy?
-
-What failed?
-
-Who is affected?
-
-Why did it fail?
-
-Has the issue been resolved?
-
-🧪 Definition of Done
-
-A feature should not be considered complete simply because its UI works.
+A feature is not complete simply because the UI works.
 
 A production-oriented feature should satisfy:
 
-┌─────────────────────────────────┐
-│       FEATURE COMPLETE          │
-├─────────────────────────────────┤
-│                                 │
-│  ✓ Functional                   │
-│  ✓ Validated                    │
-│  ✓ Authorized                   │
-│  ✓ Secure                       │
-│  ✓ Tested                       │
-│  ✓ Logged appropriately         │
-│  ✓ Documented                   │
-│  ✓ Reviewed                     │
-│  ✓ Compatible with architecture │
-│                                 │
-└─────────────────────────────────┘
-🤝 Contributing
+```text
+┌──────────────────────────────────┐
+│          FEATURE COMPLETE        │
+├──────────────────────────────────┤
+│                                  │
+│  ✓ Functional                    │
+│  ✓ Validated                     │
+│  ✓ Authorized                    │
+│  ✓ Secure                        │
+│  ✓ Tested                        │
+│  ✓ Observable                    │
+│  ✓ Documented                    │
+│  ✓ Reviewed                      │
+│  ✓ Architecturally Compatible    │
+│                                  │
+└──────────────────────────────────┘
+```
 
-Contributions should follow the project's architectural principles.
+---
+
+# 🔄 Git Workflow
+
+## Check status
+
+```bash
+git status
+```
+
+## Create a feature branch
+
+```bash
+git checkout -b feature/marketplace-search
+```
+
+## Stage changes
+
+```bash
+git add .
+```
+
+## Commit
+
+```bash
+git commit -m "feat: add marketplace search"
+```
+
+## Push
+
+```bash
+git push -u origin feature/marketplace-search
+```
+
+---
+
+# 🌿 Branch Strategy
+
+Recommended branch categories:
+
+```text
+main
+│
+├── feature/*
+├── fix/*
+├── refactor/*
+├── docs/*
+├── security/*
+└── chore/*
+```
+
+### `main`
+
+Stable integration branch.
+
+### `feature/*`
+
+New functionality.
+
+### `fix/*`
+
+Bug fixes.
+
+### `refactor/*`
+
+Architectural improvements.
+
+### `security/*`
+
+Security changes.
+
+### `docs/*`
+
+Documentation.
+
+---
+
+# 🏷️ Commit Convention
+
+Recommended prefixes:
+
+| Prefix      | Purpose                  |
+| ----------- | ------------------------ |
+| `feat:`     | New feature              |
+| `fix:`      | Bug fix                  |
+| `docs:`     | Documentation            |
+| `refactor:` | Code restructuring       |
+| `test:`     | Tests                    |
+| `security:` | Security changes         |
+| `chore:`    | Maintenance              |
+| `perf:`     | Performance improvements |
+
+Examples:
+
+```bash
+git commit -m "feat: add hostel discovery"
+
+git commit -m "fix: resolve authentication session issue"
+
+git commit -m "docs: update installation guide"
+
+git commit -m "refactor: separate marketplace services"
+
+git commit -m "security: strengthen admin authorization"
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions should follow the project's architectural and security principles.
 
 Before opening a pull request:
 
-Create a focused branch.
-Keep changes scoped.
-Follow existing naming conventions.
-Validate all external input.
-Verify authorization.
-Test database operations.
-Avoid exposing secrets.
-Update documentation.
-Review the final Git diff.
-Provide a clear pull request description.
+1. Create a focused branch.
+2. Keep changes scoped.
+3. Follow naming conventions.
+4. Validate external input.
+5. Verify authorization.
+6. Test database operations.
+7. Avoid exposing secrets.
+8. Update documentation.
+9. Review the Git diff.
+10. Provide a clear pull request description.
 
 Example:
 
+```bash
 git checkout -b feature/new-campus-module
 
 git add .
@@ -1334,76 +1642,94 @@ git add .
 git commit -m "feat: add new campus module"
 
 git push -u origin feature/new-campus-module
-🔐 Security Reporting
+```
 
-Security vulnerabilities should not be publicly disclosed through ordinary GitHub issues.
+---
 
-When a security issue is identified, provide:
+# 🔐 Security Reporting
 
-Vulnerability description
-Affected component
-Reproduction steps
-Potential impact
-Suggested mitigation where available
+Security vulnerabilities should **not** be disclosed through ordinary public GitHub issues.
+
+A security report should contain:
+
+* Vulnerability description
+* Affected component
+* Reproduction steps
+* Potential impact
+* Suggested mitigation where available
 
 Do not include:
 
-Passwords
-API keys
-Private tokens
-Personal user data
-Production credentials
-📜 License
+* Passwords
+* API keys
+* Private tokens
+* Personal user data
+* Production credentials
 
-A license has not been formally declared in this repository at the time of writing.
+A dedicated security contact/process should be added before the project enters serious production use.
 
-Until an explicit license is added, the source code should not be assumed to be available for unrestricted redistribution, modification, or commercial reuse.
+---
 
-🏢 About AYGLOBE INC
+# 📜 License
 
-AYGLOBE INC is the organization behind WEZO CAMPUS HUB.
+A formal license has not been declared in this repository at the time of writing.
 
-The broader mission is to build technology products focused on:
+Until an explicit license is added, the source code should **not** be assumed to be available for unrestricted redistribution, modification, or commercial reuse.
 
-Education
-Digital communities
-Emerging markets
-Student technology
-Accessible digital infrastructure
-Intelligent software systems
-👨‍💻 Founder & CEO
+---
 
-Ayman Muhammad
+# 🏢 About AYGLOBE INC
 
-Founder & CEO of AYGLOBE INC.
+**AYGLOBE INC** is the organization behind WEZO CAMPUS HUB.
 
-WEZO CAMPUS HUB is being developed as part of a broader vision to build technology that solves practical problems for students and communities.
+The broader mission is to build technology focused on:
 
-🌍 WEZO CAMPUS HUB
+* Education
+* Digital communities
+* Student technology
+* Emerging markets
+* Accessible digital infrastructure
+* Intelligent software systems
 
-One account. One campus ecosystem. One digital hub.
+---
 
-WEZO CAMPUS HUB is being built to become a unified digital layer for university life.
+# 👨‍💻 Founder & CEO
+
+**Ayman Muhammad**
+
+Founder & CEO of **AYGLOBE INC**.
+
+WEZO CAMPUS HUB is being developed as part of a broader vision to build practical technology for students, universities, and communities.
+
+---
+
+# 🌍 WEZO CAMPUS HUB
+
+> **One account. One campus ecosystem. One digital hub.**
 
 Starting with the student.
 
 Expanding to the campus.
 
-Scaling to universities.
+Connecting universities.
 
 Building toward a broader digital ecosystem.
 
-🎓 Built for Students. Designed for Scale. Engineered for the Future.
+---
 
-WEZO CAMPUS HUB
+## 🎓 Built for Students. Designed for Scale. Engineered for the Future.
 
-AYGLOBE INC
-Founder & CEO — Ayman Muhammad
+**WEZO CAMPUS HUB**
 
-Repository
+**AYGLOBE INC**
+**Founder & CEO — Ayman Muhammad**
 
-Project: WEZO CAMPUS HUB
-Repository: Ayman-muhammad/wezo-campus
-Primary Language: PHP
-Database: MySQL
-Organization: AYGLOBE INC
+---
+
+## Repository
+
+**Project:** WEZO CAMPUS HUB
+**Repository:** `Ayman-muhammad/wezo-campus`
+**Primary Language:** PHP
+**Database:** MySQL
+**Organization:** AYGLOBE INC
